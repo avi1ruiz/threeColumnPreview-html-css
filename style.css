@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {height: 100vh; background: var(--very-light-gray);}
+.sedan {background: var(--bright-orange); color: var(--bright-orange)}
+.suv {background: var(--dark-cyan); color: var(--dark-cyan);}
+.luxury {background: var(--very-dark-cyan); color: var(--very-dark-cyan);}
+
+h1, button {color: var(--very-light-gray);}
+p {font-size: 1rem; color: var(--transparent-white);}
+
+.component {display: flex}
+.column {width: 17rem; padding: 3rem;}
+.column.sedan {border-radius: 0.8rem 0 0 0.8rem;}
+.column.luxury {border-radius: 0 0.8rem 0.8rem 0;} 
+
+.logo.sedan { content: url("./images/icon-sedans.svg"); }
+.logo.suv { content:  url("./images/icon-suvs.svg");}
+.logo.luxury { content:  url("./images/icon-luxury.svg");}
+
+.title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 1.5rem;
+    margin-left: 0;
+}
+
+.information {
+    line-height: 1.4rem;
+    margin-bottom: 5rem;
+}
+
+.btn {
+    padding: 0.7rem 1.5rem; 
+    border-radius: 2rem; 
+    background: var(--very-light-gray);
+    border: none;
+}
+
+@media screen and (max-width: 830px) {
+    body {height: auto;}
+    .component {flex-direction: column;}
+    .column {width: 17rem; padding: 2rem;}
+    .title {font-size: 2rem;}
+    .information {margin-bottom: 1.5rem;}
+    .column.sedan {border-radius: 0.8rem 0.8rem 0 0;}
+    .column.luxury {border-radius: 0 0 0.8rem 0.8rem;}
+}
+
+/*Pie de pagina*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
